@@ -1,0 +1,21 @@
+# Este script do docker compose sobe um container com o banco de dados mysql
+# e expõe a porta 3306 do localhost
+version: '3.3'
+
+services:
+    db:
+        ports:
+            - 3306:3306
+        expose:
+            - 3306
+        image: mysql
+        restart: always
+        environment:
+            MYSQL_DATABASE: 'store'
+            MYSQL_USER: 'common'
+            MYSQL_PASSWORD: '123456'
+            MYSQL_ROOT_PASSWORD: admin
+        volumes:
+            - db:/var/lib/mysql
+volumes:
+    db:
