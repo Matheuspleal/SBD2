@@ -1,4 +1,5 @@
 --Script de criação das tabelas e do banco de dados MySQL
+CREATE DATABASE IF NOT EXISTS store;
 
 --Entidades
     CREATE TABLE Gerente (
@@ -26,15 +27,15 @@
 
     CREATE TABLE Produto (
         codigo_de_barras int NOT NULL,
-        preco_unitario float(2),
-        qtd_estoque int NOT NULL,
+        preco_unitario float(2) NOT NULL DEFAULT 10.00,
+        qtd_estoque int NOT NULL DEFAULT 1,
         nome varchar(100),
 
         PRIMARY KEY (codigo_de_barras)
     );
 
     CREATE TABLE Venda (
-        data_de_compra DATETIME NOT NULL,
+        data_de_compra DATETIME NOT NULL DEFAULT GETDATE(),
         qtd_vendida int NOT NULL,
         matricula_empregado int NOT NULL,
         codigo_de_barras int NOT NULL,
