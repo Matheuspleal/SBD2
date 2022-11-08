@@ -1,0 +1,1 @@
+--Script de criação de perfis de controles nas tabelas

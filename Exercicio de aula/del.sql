@@ -1,0 +1,1 @@
+--Script de exclusão dos dados das tabelas
