@@ -5,7 +5,7 @@ CREATE DATABASE IF NOT EXISTS store;
     CREATE TABLE Gerente (
         cpf varchar(11) NOT NULL,
         email varchar(100) NOT NULL,
-        area varchar(50) NOT NULL,
+        area ENUM('Moveis', 'Eletronicos', 'Utensilios') NOT NULL,
         nome varchar(120) NOT NULL,
         senha_acesso varchar(10) NOT NULL,
 
@@ -30,6 +30,7 @@ CREATE DATABASE IF NOT EXISTS store;
         preco_unitario float(2) NOT NULL DEFAULT 10.00,
         qtd_estoque int NOT NULL DEFAULT 1,
         nome varchar(100),
+        area ENUM('Moveis', 'Eletronicos', 'Estoque', 'Utensilios') NOT NULL,
 
         PRIMARY KEY (codigo_de_barras)
     );

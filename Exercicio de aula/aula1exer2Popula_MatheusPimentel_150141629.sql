@@ -20,7 +20,7 @@ INSERT INTO Gerente (cpf, email, area, nome, senha_acesso)
 VALUES ('10347613192', 'jandira_gerente@loja.com', 'Eletronicos', 'Jandira Silva', 'y$$11#!h');
 
 INSERT INTO Gerente (cpf, email, area, nome, senha_acesso)
-VALUES ('10364611411', 'manoela_gerente@loja.com', 'Estoque', 'Manoela Santos', 'g(*)1lx%!');
+VALUES ('10364611411', 'manoela_gerente@loja.com', 'Utensilios', 'Manoela Santos', 'g(*)1lx%!');
 
 -- Empregados
 INSERT INTO Empregado (matricula, endereco_residencial, telefone_residencial, telefone_celular, nome, cpf, senha_acesso)
@@ -45,67 +45,67 @@ INSERT INTO Empregado (matricula, endereco_residencial, telefone_residencial, te
 VALUES (7, 'Rota 06 Rio das Ostras', '32111833', '981234432', 'Murilo Silva', '63008606992', 'mur1l0');
 
 -- Produtos
-INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome)
-VALUES (12345, 1500.50, 100, 'Sofa cama bege');
+INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome, area)
+VALUES (12345, 1500.50, 100, 'Sofa cama bege', 'Moveis');
 
-INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome)
-VALUES (54321, 1230.50, 50, 'Armario cozinha inteirico');
+INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome, area)
+VALUES (54321, 1230.50, 50, 'Armario cozinha inteirico', 'Moveis');
 
-INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome)
-VALUES (45132, 890.99, 100, 'Sofa preto');
+INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome, area)
+VALUES (45132, 890.99, 100, 'Sofa preto', 'Moveis');
 
-INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome)
-VALUES (98765, 6700.90, 120, 'Iphone 13s');
+INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome, area)
+VALUES (98765, 6700.90, 120, 'Iphone 13s', 'Eletronicos');
 
-INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome)
-VALUES (58697, 5670.90, 80, 'Samsung s42');
+INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome, area)
+VALUES (58697, 5670.90, 80, 'Samsung s42', 'Eletronicos');
 
-INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome)
-VALUES (17352, 2300.50, 10, 'Conjunto de facas de titanio');
+INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome, area)
+VALUES (17352, 2300.50, 10, 'Conjunto de facas de titanio', 'Utensilios');
 
-INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome)
-VALUES (12039, 120.90, 15, 'Porta Joias svarovski');
+INSERT INTO Produto (codigo_de_barras, preco_unitario, qtd_estoque, nome, area)
+VALUES (12039, 120.90, 15, 'Porta Joias svarovski', 'Utensilios');
 
 -- Vendas
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 1, 2, 54321);
+VALUES (CURRENT_TIMESTAMP(), 1, 2, 12345);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 1, 1, 12345);
+VALUES (CURRENT_TIMESTAMP(), 1, 1, 54321);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
 VALUES (CURRENT_TIMESTAMP(), 5, 3, 45132);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 3, 5, 12039);
+VALUES (CURRENT_TIMESTAMP(), 3, 5, 98765);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 1, 7, 17352);
+VALUES (CURRENT_TIMESTAMP(), 1, 6, 58697);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 2, 4, 58697);
+VALUES (CURRENT_TIMESTAMP(), 2, 4, 17352);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 10, 6, 45132);
+VALUES (CURRENT_TIMESTAMP(), 10, 6, 12039);
 
 -- Supervisiona
 INSERT INTO supervisiona (cpf_gerente, matricula_empregado)
-VALUES ('00255577701', 1);
+VALUES ('00133322299', 1);
 
 INSERT INTO supervisiona (cpf_gerente, matricula_empregado)
-VALUES ('10346713912', 2);
+VALUES ('00255577701', 2);
 
 INSERT INTO supervisiona (cpf_gerente, matricula_empregado)
-VALUES ('00133322299', 3);
+VALUES ('10346713912', 3);
 
 INSERT INTO supervisiona (cpf_gerente, matricula_empregado)
-VALUES ('00133322299', 4);
+VALUES ('31346713912', 4);
 
 INSERT INTO supervisiona (cpf_gerente, matricula_empregado)
-VALUES ('00133322299', 5);
+VALUES ('30346713912', 5);
 
 INSERT INTO supervisiona (cpf_gerente, matricula_empregado)
-VALUES ('00133322299', 6);
+VALUES ('10347613192', 6);
 
 INSERT INTO supervisiona (cpf_gerente, matricula_empregado)
-VALUES ('00133322299', 7);
+VALUES ('10364611411', 7);
