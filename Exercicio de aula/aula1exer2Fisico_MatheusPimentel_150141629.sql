@@ -21,8 +21,8 @@ CREATE DATABASE IF NOT EXISTS store;
         cpf varchar(11) NOT NULL,
         senha_acesso varchar(10) NOT NULL,
 
-        UNIQUE (cpf),
-        PRIMARY KEY (matricula)
+        UNIQUE (matricula),
+        PRIMARY KEY (cpf)
     );
 
     CREATE TABLE Produto (
