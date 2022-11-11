@@ -20,7 +20,7 @@ INSERT INTO Gerente (cpf, email, area, nome, senha_acesso)
 VALUES ('10347613192', 'jandira_gerente@loja.com', 'Eletronicos', 'Jandira Silva', 'y$$11#!h');
 
 INSERT INTO Gerente (cpf, email, area, nome, senha_acesso)
-VALUES ('10364611411', 'manoela_gerente@loja.com', 'Estoque', 'Manoela Santos', 'g(*)1lx%!');
+VALUES ('10364611411', 'manoela_gerente@loja.com', 'Estoque', 'Manoela Santos', 'g(*)1lp1x%!');
 
 -- Empregados
 INSERT INTO Empregado (matricula, endereco_residencial, telefone_residencial, telefone_celular, nome, cpf, senha_acesso)
@@ -68,25 +68,25 @@ VALUES (12039, 120.90, 15, 'Porta Joias svarovski');
 
 -- Vendas
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 1, 2, 54321);
+VALUES (GETDATE(), 1, 2, 54321);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 1, 1, 12345);
+VALUES (GETDATE(), 1, 1, 12345);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 5, 3, 45132);
+VALUES (GETDATE(), 5, 3, 45132);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 3, 5, 12039);
+VALUES (GETDATE(), 3, 5, 12039);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 1, 7, 17352);
+VALUES (GETDATE(), 1, 7, 17352);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 2, 4, 58697);
+VALUES (GETDATE(), 2, 4, 58697);
 
 INSERT INTO Venda (data_de_compra, qtd_vendida, matricula_empregado, codigo_de_barras)
-VALUES (CURRENT_TIMESTAMP(), 10, 6, 45132);
+VALUES (GETDATE(), 10, 6, 45132);
 
 -- Supervisiona
 INSERT INTO supervisiona (cpf_gerente, matricula_empregado)

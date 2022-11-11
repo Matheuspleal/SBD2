@@ -5,5 +5,3 @@ DROP TABLE Venda;
 DROP TABLE Produto;
 DROP TABLE Gerente;
 DROP TABLE Empregado;
-DROP USER 'funcionario'@'localhost';
-DROP USER 'admin'@'localhost';

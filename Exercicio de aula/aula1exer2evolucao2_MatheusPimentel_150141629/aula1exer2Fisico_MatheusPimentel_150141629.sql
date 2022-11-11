@@ -35,7 +35,7 @@ CREATE DATABASE IF NOT EXISTS store;
     );
 
     CREATE TABLE Venda (
-        data_de_compra DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+        data_de_compra DATETIME NOT NULL DEFAULT GETDATE(),
         qtd_vendida int NOT NULL,
         matricula_empregado int NOT NULL,
         codigo_de_barras int NOT NULL,

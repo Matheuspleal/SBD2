@@ -2,8 +2,8 @@
 
 --Criação dos usuários
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'dbAdmin';
-CREATE USER 'funcionario'@'localhost' IDENTIFIED BY 'func1onarioL0j4';
+CREATE USER 'funcionario'@'localhost' IDENTIFIED BY 'func';
 
 --Permissões dos usuários
-GRANT ALL PRIVILEGES ON store TO 'admin'@'localhost';
-GRANT SELECT, INSERT, UPDATE ON store TO 'funcionario'@'localhost';
+GRANT ALL ON store.* TO 'admin'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON store.Venda TO 'funcionario'@'localhost';
